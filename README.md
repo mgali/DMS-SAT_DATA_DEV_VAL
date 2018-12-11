@@ -28,22 +28,30 @@ headers_explained.txt				detailed description of variables
 
 Please check carefully headers_explained.txt for a more detailed description of variables and their units.
 
-I produced a matlab *.m file with lots of tips for data analysis. Some of them took some (or a long) time to figure out! So this may be a very useful resource:
-
+I produced a matlab *.m file with lots of tips for data analysis:
 data_analysis_tips.m
+
+Following these database tweaks you should be able to reproduce the results found in the two papers mentioned above. Some of them took some (or a long) time to figure out! SO this should be a very useful resource.
+
 
 How to cite
 ===========
-This dataset can be freely distributed, but please cite it using its DOI. When relevant, cite also the journal articles mentioned above.
+This dataset can be freely distributed, but please cite it using its DOI on Zenodo:
+https://doi.org/10.5281/zenodo.1412135
+
+When relevant, please cite also the journal articles mentioned above.
+
 
 Acknowledgments
 ================
 I acknowledge NASA’s Ocean Biology Processing Group (OBPG) and PMEL for maintaining the respective databases and making data freely available.
 
+
 Note
 ====
 By publishing this curated dataset, I want by no means to appropriate myself of the datasets obtained by other researchers and research programs. Distributing this database with its own DOI is a contribution to to the traceability of my past research, and to future research efforts.
 
-======
+
 Enjoy!
+======
 Martí Galí Tàpias
