@@ -1,0 +1,103 @@
+'contribnum'	1. Contribution number in PMEL database. See file “ContribNum_DMSdb_all.docx”
+'year'		2. 
+'month'		3. 
+'doy'		4. Day of year (= Julian day)
+'lat'		5. [degrees N]
+'lon'		6. [degrees E]. Latitudes equal to + or - 180 were set to + or - 179.9999, respectively
+'dms'		7. DMS [nM]. Values = 0 were set to NaN
+'dmspt'		8. Total DMSP [nM]. Values = 0 were set to NaN. Calculated as DMSPp + DMSPd if DMSPt not reported (see Galí et al. 2015 Remote Sensing of Environment)
+'chlis'		9. Chlorophyll in situ [mg m-3]. Values = 0 set to NaN. Generally Turner fluorometer. Contribution numbers identified as HPLC: 135, 159 to 163, 191 and 195.
+'sstis'		10. SST in situ [C]
+'salis'		11. Salinity in situ [PSU]
+'ws'		12. Wind speed in situ [m s-1]
+'flagestuarine'	13. Flag set to 0 when sample is considered estuarine (according to papers where data are described)
+'flagChl'	14. Flag set to 0 when in situ Chl is < 0.02 mg m-3. Corresponding value set to NaN in database
+'flagAcidPhaeo'	15. Flag set to 0 when DMSPt loss suspected because of acidification method used to preserve sample (see Galí et al. 2015 Remote Sensing of Environment)
+'flagSratio'	16. Flag set to 0 for outliers of the DMS vs. DMSPt relationship (points outside the 1-99% quantile regression log-log linear fit)
+'flagS2Chl'	17. Flag set to 0 for outliers of the DMSPt vs. Chl in situ relationship (points outside the 1-99% quantile regression log-log linear fit)
+'mldmimoc'	18. Mixed Layer Depth [m] from MIMOC monthly climatology  at 0.5 degree resolution (Schmidtko et al. 2013 JGR)
+'edastro'	19. Climatological Total shortwave irradiance [W m-2] calculated with astronomical model (Brock et al. 1981 Ecol Model) provided by Sergio Vallina
+'srdedastro'	20. Climatological Total shortwave Solar Radiation Dose in the Mixed Layer [W m-2] calculated as in Vallina & Simó 2007 Science, but using kdparmm01
+'parclim'	21. Climatological PAR from SeaWiFS [mol quanta m-2 d-1]
+'srdparclim'	22. Climatological PAR Solar Radiation Dose in the Mixed Layer calculated as in Vallina & Simó 2007 Science (but using ‘kdparmm01’)
+'kd490mm01'	23. Kd at 490 nm [m-1] from Morel & Maritorena model (2001), updated by Morel et al. 2007 (Remote Sensing of Environment)
+'kdparmm01'	24. Kd in the PAR band [m-1] from Morel & Maritorena model (2001), updated by Morel et al. 2007 (Remote Sensing of Environment)
+'sstclim'	25. Sea Surface Temperature from AVHRR monthly climatology at 1 degree resolution[C]
+'no3umlclim'	26. Mean nitrate [mmol m-3] in the Mixed Layer calculated from WOA 2009 (monthly 1 degree resolution) using MLD fro MIMOC (mldmimoc)
+'po4umlclim'	27. Mean phosphate [mmol m-3] in the Mixed Layer calculated from WOA 2009 (monthly 1 degree resolution) using MLD fro MIMOC (mldmimoc)
+'no3surfclim'	28. Mean nitrate [mmol m-3] at the surface from WOA 2009 (1 degree resolution)
+'po4surfclim'	29. Mean phosphate [mmol m-3] at the surface from WOA 2009 (1 degree resolution)
+'no3cline'	30. Nitracline depth [m] defined as depth where NO3 first exceeds 1 mmol m-3 (this threshold ±50% gives similar NO3-cline depth)
+'po4cline'	31. PO4-cline depth [m] defined as  depth where PO4 first exceeds 0.4 mmol m-3 (this threshold ±50% gives similar PO4-cline depth)
+'no3lim'	32. NO3 limitation category. Set to 3 if NO3>1 mmol m-3 in the ML, set to 2 if nitracline is within 10 m below the MLD, and to 1 if deeper (more limited)
+'po4lim'	33. Similar as no3lim for PO4 (0.4 instead of 1)
+'chlclim_S'	34. Chlorophyll from SeaWiFS 1997-2009 monthly climatology binned at 1 degree resolution
+'mldboyer'	35. MLD from de Boyer Montegut et al. 2004 monthly climatology, with modified MLD criterion as in Vallina & Simó 2007 Science paper
+'mldgodas'	36. Monthly MLD from GODAS (Global Ocean Data Assimilation System), monthly resolution, 1981 to present
+'zbot'		37. Bottom depth (using GEBCO 2008 if not provided in PMEL database)
+'Lprov'		38. Longhurst province 
+'Lbiome'	39. Longhurst biome
+'Zeu'		40. Euphotic layer depth from Morel et al. 2007 (Remote Sensing of Environment)
+'stratmix'	41. Zeu/MLD categories from Uitz et al. 2006 (JGR): 1 = Stratified, 2 = Mixed, 3 = Mixed-Southern Ocean (the latter defined as in Galí et al. 2015 RSE)
+'stratmixsub'	42. Chl bins within each category from Uitz et al. 2006 (JGR) 
+'Cmicro'	43. Chlorophyll in microplankton calculated using the algorithm of Uitz et al. 2006 (JGR) [mg m-3]. BASED ON UNADJUSTED IN SITU CHL
+'Cnano'		44. Chlorophyll in nanoplankton calculated using the algorithm of Uitz et al. 2006 (JGR) [mg m-3]. BASED ON UNADJUSTED IN SITU CHL
+'Cpico'		45. Chlorophyll in picoplankton calculated using the algorithm of Uitz et al. 2006 (JGR) [mg m-3]. BASED ON UNADJUSTED IN SITU CHL
+'Cfuco'		46. Chlorophyll equivalent [mg m-3] of Fucoxanthin, based on Uitz et al. 2006 (JGR) as modified by Liu et al. 2009 (PNAS). BASED ON UNADJUSTED IN SITU CHL
+'C19hex' 	47. Chlorophyll equivalent [mg m-3] of 19-Hex, , based on Uitz et al. 2006 (JGR) as modified by Liu et al. 2009 (PNAS). BASED ON UNADJUSTED IN SITU CHL
+'Czea'		48. Chlorophyll equivalent [mg m-3] of Zeaxanthin, based on Uitz et al. 2006 (JGR) as modified by Liu et al. 2009 (PNAS). BASED ON UNADJUSTED IN SITU CHL
+'doyhemi'	49. Day of year, shifted by 183 days in Southern Hemisphere (so that 1 Jan becomes DOY 184 in Southern latitudes)
+'seasonhemi'	50. Idem as doyhemi but for season. 1 = Winter, 2 = Spring, and so on.
+'chl_sw8d1'	51. Chlorophyll [mg m-3] matchups SeaWiFS 8 days 1x1 pixel box
+'cdom_sw8d1'	52. CDOM index matchups SeaWiFS 8 days 1x1 pixel box. Product no longer supported by NASA. Morel et al. 2009 RSE.
+'kd490_sw8d1'	53. Kd490 [m-1] matchups SeaWiFS 8 days 1x1 pixel box
+'poc_sw8d1'	54. POC [mg C m-3] matchups SeaWiFS 8 days 1x1 pixel box
+'par_sw8d1'	55. PAR [mol photons m-2 d-1] matchups SeaWiFS 8 days 1x1 pixel box
+'chl_ma8d1'	56. Idem chl with MODIS-Aqua
+'cdom_ma8d1'	57. Idem cdom with MODIS-Aqua
+'kd490_ma8d1'	58. Idem kd490 with MODIS-Aqua
+'poc_ma8d1'	59. Idem poc with MODIS-Aqua
+'par_ma8d1'	60. Idem par with MODIS-Aqua
+'chl_sw8d3'	61. Chlorophyll [mg m-3] matchups SeaWiFS 8 days 3x3 pixel box
+'cdom_sw8d3'	62. CDOm index matchups SeaWiFS 8 days 3x3 pixel box
+'kd490_sw8d3'	63. Kd490 [m-1] matchups SeaWiFS 8 days 3x3 pixel box
+'poc_sw8d3'	64. POC [mg C m-3] matchups SeaWiFS 8 days 3x3 pixel box
+'par_sw8d3'	65. PAR [mol photons m-2 d-1] matchups SeaWiFS 8 days 3x3 pixel box
+'chl_ma8d3'	66. Idem with MODIS-Aqua
+'cdom_ma8d3'	67. Idem with MODIS-Aqua
+'kd490_ma8d3'	68. Idem with MODIS-Aqua
+'poc_ma8d3'	69. Idem with MODIS-Aqua
+'par_ma8d3'	70. Idem with MODIS-Aqua
+'chl_sw8d5'	71. Chlorophyll [mg m-3] matchups SeaWiFS 8 days 5x5 pixel box
+'cdom_sw8d5'	72. CDOm index matchups SeaWiFS 8 days 5x5 pixel box
+'kd490_sw8d5'	73. Kd490 [m-1] matchups SeaWiFS 8 days 5x5 pixel box
+'poc_sw8d5'	74. POC [mg C m-3] matchups SeaWiFS 8 days 5x5 pixel box
+'par_sw8d5'	75. PAR [mol photons m-2 d-1] matchups SeaWiFS 8 days 5x5 pixel box
+'chl_ma8d5'	76. Idem with MODIS-Aqua
+'cdom_ma8d5'	77. Idem with MODIS-Aqua
+'kd490_ma8d5'	78. Idem with MODIS-Aqua
+'poc_ma8d5'	79. Idem with MODIS-Aqua
+'par_ma8d5'	80. Idem with MODIS-Aqua
+'pic_sw8d1'	81. PIC [mol m-3] matchups SeaWiFS 8 days 1x1 pixel box
+'pic_ma8d1'	82. PIC [mol m-3] matchups SeaWiFS 8 days 3x3 pixel box
+'pic_sw8d3'	83. PIC [mol m-3] matchups SeaWiFS 8 days 5x5 pixel box
+'pic_ma8d3'	84. Idem with MODIS-Aqua
+'pic_sw8d5'	85. Idem with MODIS-Aqua
+'pic_ma8d5'	86. Idem with MODIS-Aqua
+'chl_swday1'	87. Chlorophyll [mg m-3] matchups SeaWiFS 1 day 1x1 pixel box
+'chl_maday1'	88. Idem with MODIS-Aqua
+'chl_swday3'	89. Chlorophyll [mg m-3] matchups SeaWiFS 1 day 3x3 pixel box
+'chl_maday3'	90. Idem with MODIS-Aqua
+'chl_swday5'	91. Chlorophyll [mg m-3] matchups SeaWiFS 1 day 5x5 pixel box
+'chl_maday5'	92. Idem with MODIS-Aqua
+'sstshiftdaym4'	93. SST AVHRR matchup (4 km resolution, daily data) shifted by -4 days [C]
+'sstshiftdaym3'	94. SST AVHRR matchup (4 km resolution, daily data) shifted by -3 days [C]
+'sstshiftdaym2'	95. SST AVHRR matchup (4 km resolution, daily data) shifted by -2 days [C]
+'sstshiftdaym1'	96. SST AVHRR matchup (4 km resolution, daily data) shifted by -1 days [C]
+'sstshiftday0'	97. SST AVHRR matchup (4 km resolution, daily data) on sampling date (shifted by 0 days) [C]
+'sstshiftdayp1'	98. SST AVHRR matchup (4 km resolution, daily data) shifted by +1 day [C]
+'sstshiftdayp2'	99. SST AVHRR matchup (4 km resolution, daily data) shifted by +2 days [C]
+'sstshiftdayp3'	100. SST AVHRR matchup (4 km resolution, daily data) shifted by +3 days [C]
+'sstshiftdayp4'	101. SST AVHRR matchup (4 km resolution, daily data) shifted by +4 days [C]
+'sstval' 	102. SST AVHRR matchup consensus of all previous [C]
+'daylength'	103. [hours], as used in Galí et al. 2018 BG (standard astronomical function)
