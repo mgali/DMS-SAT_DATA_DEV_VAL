@@ -37,7 +37,7 @@ Following these database tweaks you should be able to reproduce the results foun
 How to cite
 ===========
 This dataset can be freely distributed, but please cite it using its DOI on Zenodo:
-https://doi.org/10.5281/zenodo.1412135
+https://doi.org/10.5281/zenodo.2205131
 
 When relevant, please cite also the journal articles mentioned above.
 
